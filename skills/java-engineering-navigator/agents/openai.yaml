@@ -1,0 +1,7 @@
+interface:
+  display_name: "Java Engineering Navigator"
+  short_description: "Route Java engineering work to focused skills"
+  default_prompt: "Use $java-engineering-navigator to identify and route this Java or Spring task to the right focused skill."
+
+policy:
+  allow_implicit_invocation: true

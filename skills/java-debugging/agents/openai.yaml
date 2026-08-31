@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Debugging"
+  short_description: "Find evidence-backed causes of Java failures"
+  default_prompt: "Use $java-debugging to reproduce this Java failure and identify its root cause."

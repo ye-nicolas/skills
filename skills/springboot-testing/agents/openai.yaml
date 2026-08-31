@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring Boot Testing"
+  short_description: "Test Spring framework behavior at the right boundary"
+  default_prompt: "Use $springboot-testing to design and implement focused tests for this Spring Boot behavior."

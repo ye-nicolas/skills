@@ -12,6 +12,7 @@
 *.log
 *.tmp
 *.swp
+.agent_cache/
 
 # Python
 **/__pycache__/

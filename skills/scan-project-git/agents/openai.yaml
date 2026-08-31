@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scan Project Git"
+  short_description: "Scan project repositories without descending into Git roots"
+  default_prompt: "Use $scan-project-git to find Git repositories under the active project and list their names and branches."

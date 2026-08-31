@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Message"
+  short_description: "Draft a commit message from the current repository"
+  default_prompt: "Use $commit-msg to draft one Conventional Commit message from staged changes in the Git repository containing my current working directory."

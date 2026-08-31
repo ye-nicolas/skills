@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintainable Java Code"
+  short_description: "Write clear, simple, maintainable Java code"
+  default_prompt: "Use $maintainable-java-code to implement this Java change with clear contracts and minimal accidental complexity."

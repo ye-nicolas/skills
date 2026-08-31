@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Build Dependency Management"
+  short_description: "Maintain Java builds, toolchains, and dependencies"
+  default_prompt: "Use $java-build-dependency-management to make this Java build or dependency change with minimal compatibility risk."

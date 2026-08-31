@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Performance Engineering"
+  short_description: "Measure and improve Java performance safely"
+  default_prompt: "Use $java-performance-engineering to measure this Java performance problem and identify the real bottleneck."

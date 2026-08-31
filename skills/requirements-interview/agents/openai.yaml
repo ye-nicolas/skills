@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements Interview"
+  short_description: "Question ideas into development specs"
+  default_prompt: "Use $requirements-interview to question this idea one step at a time and produce an approved development spec."

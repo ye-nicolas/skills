@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Documentation"
+  short_description: "Turn source code into Markdown docs"
+  default_prompt: "Use $markdown-docs to turn this source code into accurate Markdown documentation."

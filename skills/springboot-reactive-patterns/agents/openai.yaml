@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring Boot Reactive Patterns"
+  short_description: "WebFlux and Reactor patterns for Java"
+  default_prompt: "Use $springboot-reactive-patterns to design or review this Spring WebFlux or Reactor code."

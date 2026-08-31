@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Implementation Planning"
+  short_description: "Plan verified Java changes from repository evidence"
+  default_prompt: "Use $java-implementation-planning to turn this approved Java or Spring change into an ordered, file-level implementation plan."

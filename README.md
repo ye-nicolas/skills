@@ -18,18 +18,43 @@ skills/
     └── assets/
 ```
 
-## Use with Codex
+## Inventory
 
-Codex discovers personal skills from `~/.agents/skills`. Link a skill from this
-repository into that directory:
+See the [skill inventory](docs/skill-inventory.md) for the version-controlled
+skills in this repository and a dated snapshot of bundled and plugin-provided
+skills found in the local Codex installation. The inventory also records the
+version-controlled global Codex guidance under `config/`.
+
+## Quick Setup
+
+Run `make` from the repository root to automatically link all skills and global guidance files to your environment (`~/.agents/skills` and `~/.codex`):
 
 ```bash
-mkdir -p "$HOME/.agents/skills"
-ln -s "$PWD/skills/example-skill" "$HOME/.agents/skills/example-skill"
+make
 ```
 
-Replace `example-skill` with the skill directory name. Run the commands from
-the repository root.
+Available `make` targets:
+
+```bash
+make setup        # (Default) Link both skills and AGENTS.md guidance
+make skills       # Link ONLY skills to ~/.agents/skills
+make agents       # Link ONLY AGENTS.md and SOP files to ~/.codex
+make status       # Inspect current symlink status
+make clean        # Remove symlinks created from this repository
+make help         # Show available targets
+```
+
+
+
+## Global Codex guidance
+
+The `config/` directory contains the global `AGENTS.md` working agreements and
+their conditional workflow documents. The live files under `~/.codex` are
+symlinked to these version-controlled copies.
+
+The guidance is intentionally stored below `config/` instead of as a repository
+root `AGENTS.md`. This preserves its global role without also applying it as a
+second repository-scoped instruction file when working in this repository.
 
 ## Conventions
 
@@ -37,4 +62,3 @@ the repository root.
 - Name skill directories with lowercase letters, digits, and hyphens.
 - Keep instructions in `SKILL.md`; add supporting files only when needed.
 - Do not commit credentials, tokens, private data, or machine-specific state.
-

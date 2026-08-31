@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contract-First Refactoring"
+  short_description: "Refactor by clarifying responsibilities and method contracts"
+  default_prompt: "Use $contract-first-refactoring to analyze responsibilities and method contracts before making a minimal semantic refactor."

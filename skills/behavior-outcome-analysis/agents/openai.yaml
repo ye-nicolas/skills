@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behavior Outcome Analysis"
+  short_description: "Derive outcomes from requirements and code"
+  default_prompt: "Use $behavior-outcome-analysis to derive all meaningful outcomes from these requirements, code paths, and data states."

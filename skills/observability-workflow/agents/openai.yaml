@@ -1,0 +1,7 @@
+interface:
+  display_name: "Observability Workflow"
+  short_description: "Assess gaps, design SLOs, and plan OpenTelemetry"
+  default_prompt: "Use $observability-workflow to assess this service's observability gaps and produce a prioritized Java/Spring telemetry plan."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Architecture Review"
+  short_description: "Review Java boundaries, coupling, and ownership"
+  default_prompt: "Use $java-architecture-review to assess this Java system's boundaries and recommend the smallest coherent architecture change."

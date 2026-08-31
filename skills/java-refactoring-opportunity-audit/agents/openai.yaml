@@ -1,0 +1,3 @@
+interface:
+  display_name: "Java Codebase Improvement Audit"
+  short_description: "Audit Java codebases for maintainable improvements"

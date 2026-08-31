@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring Messaging Patterns"
+  short_description: "Design reliable Spring broker and event flows"
+  default_prompt: "Use $spring-messaging-patterns to design or review this Spring messaging flow and its delivery guarantees."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Code Review"
+  short_description: "Review Java changes for actionable defects"
+  default_prompt: "Use $java-code-review to review this Java or Spring change set against its requirements and repository contracts."

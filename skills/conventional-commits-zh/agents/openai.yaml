@@ -1,0 +1,7 @@
+interface:
+  display_name: "Conventional Commits Reference"
+  short_description: "Explain or draft Conventional Commits text"
+  default_prompt: "Use $conventional-commits-zh to explain or draft a Conventional Commit from the intent I provide."
+
+policy:
+  allow_implicit_invocation: false

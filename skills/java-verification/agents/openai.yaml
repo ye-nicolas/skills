@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Verification"
+  short_description: "Verify Java changes with repository-owned checks"
+  default_prompt: "Use $java-verification to run and report the configured verification for this Java change."
