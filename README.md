@@ -11,33 +11,108 @@ skills/
 │   └── PROJECT_EXECUTION.*  # Conditional execution workflows
 ├── docs/                    # Documentation & Inventory
 │   └── skill-inventory.md   # Skill inventory snapshot & license provenance
-├── skills/                  # Version-controlled Agent Skills (~/.agents/skills)
+├── skills/                  # Version-controlled Agent Skills
 │   ├── java-code-review/
 │   │   └── SKILL.md
 │   ├── observability/
 │   └── ... (32 skills total)
-├── Makefile                 # Commands for quick linking & cleanup
-└── setup.sh                 # Environment setup script
+└── setup-guidance.sh        # Optional global guidance setup script
 ```
+
+## Prerequisites
+
+- Node.js and npm, which provide `npx`
+- Codex, when installing with `--agent codex`
+
+Verify the required commands before installing:
+
+```bash
+node --version
+npx --version
+```
+
+The `skills` CLI is downloaded by `npx` when needed; it is not bundled with Codex and does not require a separate global npm installation.
 
 ## 🚀 Quick Start
 
-Run `make` from the repository root to link all skills to `~/.agents/skills` and global guidance files to `~/.codex`:
+### Install the skills
+
+Preview the skills available in this repository without installing them:
 
 ```bash
-make
+npx skills add ye-nicolas/skills --list
 ```
 
-### Available `make` Targets
+Install every skill globally for Codex:
 
-| Target | Command | Description |
-| :--- | :--- | :--- |
-| **`setup`** *(default)* | `make` / `make setup` | Link skills to `~/.agents/skills` and guidance to `~/.codex` |
-| **`skills`** | `make skills` | Link ONLY skills to `~/.agents/skills` |
-| **`agents`** | `make agents` | Link ONLY AGENTS.md and SOP files to `~/.codex` |
-| **`status`** | `make status` | Inspect current symlink status in environment |
-| **`clean`** | `make clean` | Remove all symlinks created from this repository |
-| **`help`** | `make help` | Show available Makefile targets |
+```bash
+npx skills add ye-nicolas/skills --global --agent codex --skill '*'
+```
+
+Install only selected skills by name:
+
+```bash
+npx skills add ye-nicolas/skills \
+  --global \
+  --agent codex \
+  --skill java-code-review \
+  --skill springboot-testing
+```
+
+The `--global` option makes the installed skills available across projects. Without it, the CLI installs them for the current project only.
+
+This standard installation only manages the Agent Skills under `skills/`. It does not modify global Codex guidance in `~/.codex`.
+
+When developing or testing changes from a local checkout, use the repository path instead of the GitHub source:
+
+```bash
+npx skills add . --global --agent codex --skill '*'
+```
+
+### Verify and manage the installation
+
+List the skills installed globally for Codex:
+
+```bash
+npx skills list --global --agent codex
+```
+
+Update globally installed skills:
+
+```bash
+npx skills update --global
+```
+
+Remove installed skills interactively:
+
+```bash
+npx skills remove --global --agent codex
+```
+
+Installed skills are available to Codex on the next turn.
+
+For a private repository, installers must already have GitHub access through their Git credentials. They can use the SSH source form:
+
+```bash
+npx skills add git@github.com:ye-nicolas/skills.git \
+  --global \
+  --agent codex \
+  --skill '*'
+```
+
+### Optional: install global guidance
+
+The files under `config/` define global working agreements for Codex. Installing them affects every Codex project for the current user, so review them before opting in.
+
+Clone the repository, then run the dedicated guidance setup script:
+
+```bash
+git clone https://github.com/ye-nicolas/skills.git
+cd skills
+./setup-guidance.sh
+```
+
+The script links `config/AGENTS.md` and `config/PROJECT_EXECUTION.*.md` into `~/.codex`. If a destination is an existing regular file, the script first moves it to a `.bak` backup.
 
 ---
 
