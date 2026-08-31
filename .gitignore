@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.venv/
+
+# JavaScript and generated output
+**/node_modules/
+**/dist/
+**/build/
+
+# IDE metadata
+.idea/
+.vscode/
